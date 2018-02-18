@@ -5,15 +5,9 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from  're
 
 import './App.css';
 import {
-    ButtonToolbar,
-    DropdownButton,
-    MenuItem,
     Grid,
     Row,
     Col,
-    FormGroup,
-    FormControl,
-    ControlLabel,
     Button,
     Glyphicon
 } from 'react-bootstrap';
@@ -22,34 +16,6 @@ class App extends Component {
     state = {
         response: ''
     };
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     message: null,
-  //     fetching: true
-  //   };
-  // }
-
-  // componentDidMount() {
-  //   fetch('/api/json')
-  //     .then(response => {
-  //       if (!response.ok) {
-  //         throw new Error(`status ${response.status}`);
-  //       }
-  //       return response.json();
-  //     })
-  //     .then(json => {
-  //       this.setState({
-  //         message: json.message,
-  //         fetching: false
-  //       });
-  //     }).catch(e => {
-  //       this.setState({
-  //         message: `API call failed: ${e}`,
-  //         fetching: false
-  //       });
-  //     })
-  // }
     componentDidMount() {
         this.callApi()
             .then(res => {
@@ -83,9 +49,6 @@ class App extends Component {
     priceFormatter(cell, row) {
         console.log(cell.toString().slice(-2))// String example
         let newCell = cell.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
-        // let lastDigits = cell.toString().slice(-2);
-        let commaSpot = cell.toString().slice(-5);
-        let formattedCell = `$`
         return `$${newCell}`;
     }
 
@@ -175,23 +138,6 @@ class App extends Component {
         {/*Set all the three different columns here */}
         {/*<p className="App-intro">{this.state.response.image}</p>*/}
     </div>
-      // <div className="App">
-      //   <div className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h2>Welcome to React</h2>
-      //   </div>
-      //   <p className="App-intro">
-      //     {'This is '}
-      //     <a href="https://github.com/mars/heroku-cra-node">
-      //       {'create-react-app with a custom Node/Express server'}
-      //     </a><br/>
-      //   </p>
-      //   <p className="App-intro">
-      //     {this.state.fetching
-      //       ? 'Fetching message from API'
-      //       : this.state.message}
-      //   </p>
-      // </div>
     );
   }
 }
