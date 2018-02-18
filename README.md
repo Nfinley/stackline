@@ -6,7 +6,7 @@ Visit: https://safe-mountain-57255.herokuapp.com/
 
 To run locally:
 ````
-git clone https://github.com/Nfinley/stackline-example.git
+git clone
 cd stackline-example-123
 yarn dev
 
