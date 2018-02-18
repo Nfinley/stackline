@@ -17,3 +17,5 @@ $ npm run dev
 
 
 ```
+
+Built off of basic create-react-app and https://github.com/Nfinley/heroku-cra-node/blob/master/README.md
