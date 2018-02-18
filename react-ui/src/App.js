@@ -135,8 +135,6 @@ class App extends Component {
                 </Col>
             </Row>
         </Grid>
-        {/*Set all the three different columns here */}
-        {/*<p className="App-intro">{this.state.response.image}</p>*/}
     </div>
     );
   }
